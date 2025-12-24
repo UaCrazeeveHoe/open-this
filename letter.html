@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>merry christmas</title>
+  <style>
+     body {
+      background: #fdf6e3;
+      font-family: "Georgia", serif;
+      padding: 40px;
+      color: #333;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    #letter {
+      white-space: pre-line;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>merry christmas</h1>
+  <div id="letter"></div>
+
+
+<script>
+const text = `
+hello, merry xmas
+i made this little thing as a way to greet you with warm words despite the 
+night being cold. i hope you're doing well, it's been awhile since we last 
+had a conversation together, we've grown quite distant towards one another.
+but, that's just how it is LOL. i have to admit that i've thought of you for at least
+twice or thrice, thinking about your well-being. 
+i love writing letters, im not sure if i've brought that up to you but if i haven't then 
+here u go. letters are just really amazing, i'm writing all these words down based on how i'm feeling
+right now, hoping you could possibly feel the warmth i have in me. 
+i wish for us to meet soon so i can at least open up to you about my very own reasons on why i decided to 
+leave you hanging. this is just a sweet christmas note w/o bringing up what's considered to be negative.
+hope this letter finds you well, possibly making you smile at least a little.
+may everything you carry become beautiful, i hope this upcoming year treats you gently.
+greeting you with love, peace, and happiness.
+
+sincerely,
+zeeve
+`;
+</script>
+
+  
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("letter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+      }
+    }
+    typeWriter();
+  </script>
+
+</body>
+</html>
+
+
+
+    
+    
+    
