@@ -1,0 +1,94 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 lil surprise</title>
+  <style>
+    body {
+      background: linear-gradient(#0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+       text-align: center;
+      background: rgba(0,0,0,0.45);
+      padding: 45px;
+      border-radius: 14px;
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 12px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background: #ffffff;
+    }
+    .error {
+      color: #ffb3b3;
+      margin-top: 12px;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="box">
+    <h1>🎁 lil surprise</h1>
+    <p>enter the magic word senpai!
+
+      
+    <input 
+      type="password" 
+      id="password" 
+      placeholder="magic word"
+      onkeypress="handleKey(event)"
+    >
+      
+
+    <button onclick="checkPassword()">Unlock 🎄</button>
+
+
+    <div id="message" class="error"></div>
+  </div>
+
+
+  <script>
+    const correctPassword = "usagiandshinchan";
+
+
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim().toLowerCase();
+      const message = document.getElementById("message");
+
+
+      if (input === correctPassword.toLowerCase()) {
+        window.location.href = "letter.html";
+      } else {
+        message.textContent = "BUZZER! u r not the chosen one";
+        }
+    }
+    function handleKey(e) {
+      if (e.key === "Enter") {
+        checkPassword();
+      }
+    }
+  </script>
+
+</body>
+</html>
